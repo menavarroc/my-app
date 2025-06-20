@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('---Clean---') {
             steps {
-                sh "/opt/apache-maven-3.9.9/bin/mvn clean"
+                sh "mvn clean"
             }
         }
         stage('---Test---') {
             steps {
-                sh "/opt/apache-maven-3.9.9/bin/mvn test"
+                sh "mvn test"
             }
         }
         stage('---Deploy---') {
             steps {
-                sh "/opt/apache-maven-3.9.9/bin/mvn package"
+                sh "mvn package"
             }
         }
     }
