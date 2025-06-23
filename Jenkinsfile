@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'raspberry'}
     tools {
         maven 'maven 3.9.9'
     }
